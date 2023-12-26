@@ -6,20 +6,21 @@ interface Props {
     suit: string;
 }
 const Card: React.FC<Props> = ({rank, suit}) => {
+    let suitResult = '';
         if (suit === 'diams') {
-            return ('♦');
+            suitResult = '♦';
         } else if (suit === 'hearts') {
-            return ('♥');
+            suitResult = '♥';
         } else if (suit === 'clubs') {
-            return ('♣');
+            suitResult = '♣';
         } else if (suit === 'spades') {
-            return ('♠');
+            suitResult = '♠';
         }
 
         return (
             <span className="card rank-k diams">
                 <span className="rank">{rank}</span>
-                <span className="suit">{suit}</span>
+                <span className="suit">{suitResult}</span>
             </span>
         );
 };
